@@ -18,7 +18,7 @@ public class EmployeeImplement implements EmployeeInterface {
            pstm.setString(2,emp.getName());
            pstm.setDouble(3,emp.getSalary());
            pstm.setInt(4,emp.getAge());
-           pstm.setString(5, getCity());
+           pstm.setString(5,emp.getCity());
           int cnt= pstm.executeUpdate();
           if(cnt!=0)
               System.out.println("Employee Inserted Successfully !!!");
@@ -29,11 +29,6 @@ public class EmployeeImplement implements EmployeeInterface {
        }
 
     }
-
-    private String getCity() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
     public void ShowEmployee() {
